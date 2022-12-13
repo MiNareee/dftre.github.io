@@ -9,10 +9,10 @@
     playingSound = false, //flag vble.
     soundToHandle = document.querySelector('[sound]'),
     init: function() {
-      soundToHandle.stopSound = function() {  //sound stoped event
+      soundToHandle.stopSound = function() {  
         playingSound = false;
       };
-      soundToHandle.playSound = function() { //sound played event
+      soundToHandle.playSound = function() { 
         playingSound = true;
       };
     },
