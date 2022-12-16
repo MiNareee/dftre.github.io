@@ -62,37 +62,37 @@ tick: function() {
 
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-        <a-assets>
-                <img id="rasa" src="1650702895_9-sportishka-com-p-strani-sosedi-rossii-krasivo-foto-9.jpg" >
-                <audio id="audio1" src="junichi-matsumoto-the-ancient-magus-brides-main-theme.mp3" loop="true"></audio>
-                <a-asset-item id="lkj" src=" ggghjkl.gltf"></a-asset-item>
-                
-                <video id="move1" src="IMG_8123.MOV"></video>
+       <a-assets>
+                <img id="img1" src="image1.jpg" >
+                <audio id="audio1" src="audio.mp3" loop="true"></audio>
+                <img id="img2" src="image2.jpg" >
+                <video id="move1" src="move1.mp4"></video>
+				<a-asset-item id="model1" src="model3d.gltf"></a-asset-item>
         </a-assets>
 
 
-        <a-marker preset="custom" type="pattern" url="pat\pattern-a.patt">
-          <a-image src="#rasa" rotation="90"></a-image>
+        <a-marker preset="custom" type="pattern" url="pat\patterA.patt">
+          <a-image src="#img1" rotation="90"></a-image>
         </a-marker>
 
-        <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt" vidhandler="target: #audio1">
+        <a-marker preset="custom" type="pattern" url="pat\patterB.patt" vidhandler="target: #audio1">
           <a-sound src="#audio1" soundhandler></a-sound>
         </a-marker>
 
-        <a-marker preset="custom" type="pattern" url="pat\pattern-c.patt">
+        <a-marker preset="custom" type="pattern" url="pat\patterC.patt">
             <a-text value = "Привет, мир!" font="custom-msdf.json" font-image='custom-msdf.png' negate='false' scale = "2 2 1" rotation="-90" position="0 0 0"></a-text>
         </a-marker>
 
         <a-marker preset="custom" type="pattern" url="pat\letterD.patt">
-               <a-image src="#rasa" rotation="90"></a-image>
+               <a-image src="#img2" rotation="90"></a-image>
         </a-marker>
 
         <a-marker preset="custom" type="pattern" url="pat\letterF.patt" vidhandler="target: #move1">
               <a-video src="#move1" rotation="-90"></a-video>
         </a-marker>
 
-        <a-marker preset="custom" type="pattern" url="pat\pattern-g.patt">
-             <a-gltf-model src="#lkj" rotation="90"></a-gltf-model>
+        <a-marker preset="custom" type="pattern" url="pat\patterG.patt">
+             <a-gltf-model src="#model1" rotation="90"></a-gltf-model>
         </a-marker>
 
 
